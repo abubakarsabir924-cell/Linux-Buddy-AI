@@ -36,7 +36,7 @@ User Input:
 ```bash
 ls -la
 
-AI Response:
+##AI Response:
 
 - Explains what the command does
 - Explains flags
@@ -45,11 +45,11 @@ AI Response:
 
 ---
 
-Vision
+##Vision
 
 TerminalTutor AI aims to become a real-time AI Linux learning companion that helps users safely understand and navigate Linux systems.
 
-Future goals include:
+##Future goals include:
 
 - live terminal integration
 - command safety analysis
@@ -59,7 +59,7 @@ Future goals include:
 
 ---
 
-Tech Stack
+##Tech Stack
 
 Frontend:
 
@@ -71,20 +71,20 @@ Backend:
 - Python
 - FastAPI
 
-AI:
+##AI:
 
 - OpenAI API
 
 ---
 
-Why I Built This
+##Why I Built This
 
 As a Linux learner and open-source contributor, I noticed that many beginners struggle to understand terminal commands and Linux errors.
 wanted to build a tool that makes Linux easier, safer, and more accessible for new learners.
 
 ---
 
-Roadmap
+##Roadmap
 
 See ROADMAP.md
 
@@ -92,6 +92,6 @@ See ROADMAP.md
 
 Author
 
-Abubakar Sabir
+##Abubakar Sabir
 
 I wanted to build a tool that makes Linux easier, safer, and more accessible for new learners.
