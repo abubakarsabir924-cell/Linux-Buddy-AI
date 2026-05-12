@@ -1,4 +1,4 @@
-# Contributing to TermBuddy AI
+# Contributing to LinuxBuddy AI
 
 Thank you for your interest in contributing.
 
