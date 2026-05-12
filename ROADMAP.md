@@ -1,4 +1,4 @@
-TermBuddy AI Roadmap
+LinuxBuddy AI Roadmap
 
 ---
 
