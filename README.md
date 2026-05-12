@@ -1,4 +1,4 @@
-# TermBuddy-AI
+# LinuxBuddy-AI
 AI-powered Linux terminal assistant designed to help beginners understand Linux commands, terminal errors, and system concepts in simple language.
 
 ---
@@ -47,7 +47,7 @@ ls -la
 
 ##Vision
 
-TerminalTutor AI aims to become a real-time AI Linux learning companion that helps users safely understand and navigate Linux systems.
+LinuxBuddy AI aims to become a real-time AI Linux learning companion that helps users safely understand and navigate Linux systems.
 
 ##Future goals include:
 
