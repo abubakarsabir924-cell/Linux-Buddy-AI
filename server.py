@@ -9,7 +9,7 @@ import requests
 
 app = FastAPI()
 
-API_KEY = "KEY"
+API_KEY = ""
 print(f"API KEY LOADED: {API_KEY[:10] if API_KEY else 'EMPTY'}")
 MODEL = "anthropic/claude-haiku-4-5"
 
