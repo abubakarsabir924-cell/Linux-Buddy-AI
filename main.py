@@ -6,7 +6,7 @@ from rich.text import Text
 
 console = Console()
 
-API_KEY = "KEY"
+API_KEY = ""
 MODEL = "anthropic/claude-haiku-4-5"
 
 def get_terminal_context():
@@ -17,15 +17,15 @@ def get_terminal_context():
 
 def ask_claude(user_message, eyes_on, context):
     system = """You are Linux Buddy AI — a terminal assistant.
-You help users learn Linux step by step.
+Help users learn Linux step by step.
+NEVER give copy-paste commands — show commands so user types themselves.
+Always explain what each command does and why.
+If error, explain why it happened and give alternative.
 Give ONLY ONE step at a time.
 Show ONE command only.
 Write 2 lines explanation below it.
 Then STOP and wait for user.
-NAVER give step 2 untio user runs step 1.
-NEVER give copy-paste commands — show commands clearly so user types themselves.
-Always explain what each command does and why.
-If there is an error, explain why it happened and give alternative."""
+NEVER give step 2 until user runs step 1."""
 
     if eyes_on:
         system += f"\n\nTerminal Context:\nDirectory: {context['pwd']}\nUser: {context['user']}"
@@ -38,17 +38,18 @@ If there is an error, explain why it happened and give alternative."""
         },
         json={
             "model": MODEL,
+            "max_tokens": 500,
             "messages": [
                 {"role": "system", "content": system},
                 {"role": "user", "content": user_message}
-            ],
-            "max_tokens": 500,
-            "stream": False
+            ]
         }
     )
 
     data = response.json()
-    return data["choices"][0]["message"]["content"]
+    if "choices" in data:
+        return data["choices"][0]["message"]["content"]
+    return str(data)
 
 def main():
     eyes_on = False
