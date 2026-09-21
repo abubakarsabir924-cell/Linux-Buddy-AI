@@ -1,71 +1,65 @@
-# linuxbuddy README
+# Linux Buddy AI 🐧
 
-This is the README for your extension "linuxbuddy". After writing up a brief description, we recommend including the following sections.
+> Your AI companion inside VS Code — guides you through Linux, step by step, so you actually learn.
 
-## Features
+## Why I built this
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+Most people think using AI is cheating. I disagree — but I also noticed a problem with myself.
 
-For example if there is an image subfolder under your extension project workspace:
+While contributing to OpenPrinting CUPS (a real Linux production project), I kept copy-pasting terminal errors into AI tools. It was solving my problems — but I wasn't actually learning. The copy-paste habit was growing, not my skills.
 
-\!\[feature X\]\(images/feature-x.png\)
+I also remembered how I felt as a beginner. Terminal commands were scary. One cryptic error and you're lost — most beginners just give up at that point. I almost did too.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+So I built Linux Buddy AI. A tool that sits right inside your VS Code, understands your Linux problem, and guides you one command at a time — but never lets you copy-paste. You read the command, you type it yourself, you learn.
 
-## Requirements
+No more beginners quitting because of a confusing terminal error.
+No more developers building a copy-paste habit instead of real skills.
+Just you, your terminal, and an AI that teaches instead of does.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## What it does
 
-## Extension Settings
+- 💬 *Chat first* — describe your Linux problem in plain English
+- 🎯 *One step at a time* — AI gives one command, waits for you to run it
+- 👁️ *Eyes ON/OFF* — toggle whether AI can see your terminal context
+- 📚 *Learn while doing* — no copy-paste, you type every command yourself
+- 🌐 *Works in browser too* — full web GUI available
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+## Screenshots
 
-For example:
 
-This extension contributes the following settings:
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+![Browser GUI](screenshots/gui.png)
 
-## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
 
-## Release Notes
 
-Users appreciate release notes as you update your extension.
+![VS Code Extension](screenshots/extension.png)
 
-### 1.0.0
 
-Initial release of ...
 
-### 1.0.1
+## Installation
 
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+```bash
+git clone https://github.com/abubakarsabir924-cell/Linux-Buddy-AI.git
+cd Linux-Buddy-AI
+python3 -m venv linuxbuddy-env
+source linuxbuddy-env/bin/activate
+pip install requests rich fastapi uvicorn
+Add your OpenRouter API key in server.py, then:
+Bash uvicorn server:app --reload
+Open http://127.0.0.1:8000 in your browser.
+Tech Stack
+Python + FastAPI (backend)
+TypeScript + VS Code Extension API (sidebar)
+Claude Haiku via OpenRouter (AI)
+Vanilla JS + HTML (frontend)
+Roadmap
+[ ] Auto setup script (one command install)
+[ ] Real terminal output capture (true "eyes" feature)
+[ ] VS Code Marketplace publish
+[ ] Multi-language support
+About
+Built by Abubakar Sabir Hussain — a self-taught developer from Pakistan.
+Open source contributor to OpenPrinting CUPS — 11 PRs merged into production Linux printing infrastructure.
+Made by a Pakistani self-taught developer who believes AI should be a teacher, not a crutch.
+⭐ Star this repo if you believe in learning by doing!
