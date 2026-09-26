@@ -36,29 +36,48 @@ Just you, your terminal, and an AI that teaches instead of does.
 ![VS Code Extension](screenshots/extension.png)
 
 
+![CLI](screenshots/cli.png)
 
 ## Installation
 
-```bash
+bash
 git clone https://github.com/abubakarsabir924-cell/Linux-Buddy-AI.git
 cd Linux-Buddy-AI
 python3 -m venv linuxbuddy-env
 source linuxbuddy-env/bin/activate
-pip install requests rich fastapi uvicorn
-Add your OpenRouter API key in server.py, then:
-Bash uvicorn server:app --reload
+pip install -r requirements.txt
+
+
+Create a .env file in the project root and add your OpenRouter API key:
+
+
+OPENROUTER_API_KEY=your_key_here
+
+
+Then run:
+
+bash
+uvicorn server:app --reload
+
+
 Open http://127.0.0.1:8000 in your browser.
-Tech Stack
-Python + FastAPI (backend)
-TypeScript + VS Code Extension API (sidebar)
-Claude Haiku via OpenRouter (AI)
-Vanilla JS + HTML (frontend)
-Roadmap
-[ ] Auto setup script (one command install)
-[ ] Real terminal output capture (true "eyes" feature)
-[ ] VS Code Marketplace publish
-[ ] Multi-language support
-About
+
+## Tech Stack
+
+- Python + FastAPI (backend)
+- TypeScript + VS Code Extension API (sidebar)
+- Claude Haiku via OpenRouter (AI)
+- Vanilla JS + HTML (frontend)
+
+## Roadmap
+
+- [ ] Auto setup script (one command install)
+- [ ] Real terminal output capture (true "eyes" feature)
+- [ ] VS Code Marketplace publish
+- [ ] Multi-language support
+
+## About
+
 Built by Abubakar Sabir Hussain — a self-taught developer from Pakistan.
 Open source contributor to OpenPrinting CUPS — 11 PRs merged into production Linux printing infrastructure.
 Made by a Pakistani self-taught developer who believes AI should be a teacher, not a crutch.
